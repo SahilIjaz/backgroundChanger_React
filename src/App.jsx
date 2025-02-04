@@ -1,34 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react"
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
+const [color,setColor]=useState('red')
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='w-full h-screen duration-200' style={{backgroundColor:color}}>
+
+<div className="flex justify-center items-center h-screen p-8 space-x-2">
+  <button onClick={()=>setColor('Yellow')} className="bg-cyan-950 text-white px-6 py-2 rounded-lg shadow-lg 
+               transition-all duration-300 ease-in-out transform 
+               hover:bg-cyan-800 hover:scale-105 
+               active:scale-95 active:bg-cyan-700">Yellow</button>
+
+  <button onClick={()=>setColor('Black')} className="bg-cyan-950 text-white px-6 py-2 rounded-lg shadow-lg 
+               transition-all duration-300 ease-in-out transform 
+               hover:bg-cyan-800 hover:scale-105 
+               active:scale-95 active:bg-cyan-700">Black</button>
+
+  <button onClick={()=>setColor('Green')} className="bg-cyan-950 text-white px-6 py-2 rounded-lg shadow-lg 
+               transition-all duration-300 ease-in-out transform 
+               hover:bg-cyan-800 hover:scale-105 
+               active:scale-95 active:bg-cyan-700">Green</button>
+
+  <button onClick={()=>setColor('Blue')} className="bg-cyan-950 text-white px-6 py-2 rounded-lg shadow-lg 
+               transition-all duration-300 ease-in-out transform 
+               hover:bg-cyan-800 hover:scale-105 
+               active:scale-95 active:bg-cyan-700">Blue</button>
+
+  <button onClick={()=>setColor('Indigo')} className="bg-cyan-950 text-white px-6 py-2 rounded-lg shadow-lg 
+               transition-all duration-300 ease-in-out transform 
+               hover:bg-cyan-800 hover:scale-105 
+               active:scale-95 active:bg-cyan-700">Indigo</button>
+</div>
+</div>
   )
 }
 
